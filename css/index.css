@@ -1,0 +1,82 @@
+:root {
+    --accent-color: #303031;
+    --hover-color: #4E4F50;
+    --accent-text-color: #B0B3B8;
+    --main-duration: 0.3s;
+}
+
+/* end variables */
+
+/* start global rules */
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+.accent-bg-color {
+    background-color: var(--accent-color) !important;
+}
+
+.accent-text-color {
+    color: var(--accent-text-color);
+}
+
+/* end global rules */
+
+/* start header */
+.logo {
+    color: #ebeced;
+    text-align: center;
+    font-weight: 800px;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.nav-bottom {
+    border-bottom: 3px solid var(--accent-color);
+}
+
+
+.search {
+    position: relative;
+}
+
+.search input {
+    padding-left: 15px;
+    height: 45px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+}
+
+.search input:hover {
+    background-color: var(--hover-color) !important;
+    transition: var(--main-duration);
+}
+
+.search .fa-magnifying-glass {
+    padding-left: 10px;
+    color: var(--accent-text-color);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 16px;
+}
+
+.nav-icon {
+    margin: 0 3px;
+    border-radius: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.nav-icon:last-child {
+    margin-right: 20px;
+}
+
+.nav-icon:hover {
+    background-color: var(--hover-color);
+    transition: var(--main-duration);
+}
+
+/* end header */
