@@ -1,4 +1,6 @@
+/* start variables */
 :root {
+    --bg-color: #18191A;
     --accent-color: #303031;
     --hover-color: #4E4F50;
     --accent-text-color: #B0B3B8;
@@ -8,8 +10,13 @@
 /* end variables */
 
 /* start global rules */
+* {
+    box-sizing: border-box
+}
+
 body {
     font-family: "Work Sans", sans-serif;
+    background-color: var(--bg-color) !important;
 }
 
 .accent-bg-color {
@@ -32,7 +39,7 @@ body {
 }
 
 .nav-bottom {
-    border-bottom: 3px solid var(--accent-color);
+    border-bottom: 2px double var(--accent-color);
 }
 
 
@@ -42,7 +49,7 @@ body {
 
 .search input {
     padding-left: 15px;
-    height: 45px;
+    height: 40px;
     text-indent: 25px;
     border: 2px solid #d6d4d4;
 }
@@ -63,9 +70,11 @@ body {
 
 .nav-icon {
     margin: 0 3px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    padding: 15px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 20px;
     background-color: var(--accent-color);
     cursor: pointer;
 }
@@ -80,3 +89,20 @@ body {
 }
 
 /* end header */
+
+/* start drawer */
+.drawer {
+    padding: 5px 0 5px 5px;
+    height: calc(100vh - 60px);
+    background-color: #B0B3B8;
+    overflow-y: auto;
+}
+
+.contacts-aside {
+    padding: 5px 0 5px 5px;
+    height: calc(100vh - 60px);
+    background-color: #4E4F50;
+    overflow-y: auto;
+}
+
+/* end drawer */
