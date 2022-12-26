@@ -2,8 +2,12 @@
 :root {
     --bg-color: #18191A;
     --accent-color: #303031;
-    --hover-color: #4E4F50;
-    --accent-text-color: #B0B3B8;
+    --hover-color: #4e4f5079;
+    --accent-text-color: #e9edf3;
+    --drawer-icon-color: #5781d6;
+    --scrollbar-color: rgba(128, 128, 128, 0.651);
+    --hr-color: #c0b7ab75;
+    --footer-color: #c0b7ab;
     --main-duration: 0.3s;
 }
 
@@ -15,9 +19,10 @@
 }
 
 body {
-    font-family: "Work Sans", sans-serif;
+    font-family: "Work Sans", sans-serif !important;
     background-color: var(--bg-color) !important;
 }
+
 
 .accent-bg-color {
     background-color: var(--accent-color) !important;
@@ -48,6 +53,7 @@ body {
 }
 
 .search input {
+    color: white !important;
     padding-left: 15px;
     height: 40px;
     text-indent: 25px;
@@ -92,17 +98,87 @@ body {
 
 /* start drawer */
 .drawer {
-    padding: 5px 0 5px 5px;
-    height: calc(100vh - 60px);
-    background-color: #B0B3B8;
+    /* padding: 5px 0; */
+    height: calc(100vh - 70px);
     overflow-y: auto;
 }
 
-.contacts-aside {
-    padding: 5px 0 5px 5px;
-    height: calc(100vh - 60px);
-    background-color: #4E4F50;
-    overflow-y: auto;
+.drawer-item {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.drawer-item:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+    transition: var(--main-duration);
+}
+
+.drawer-item i {
+    color: var(--drawer-icon-color);
+    width: 20px;
+    height: 20px;
+
+}
+
+.drawer-item span {
+    color: var(--accent-text-color);
+    letter-spacing: -1px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.hr-drawer {
+    margin: 8px;
+    height: 2px;
+    color: var(--hr-color);
+}
+
+/* start scroll bar */
+/* width */
+.drawer::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Handle */
+.drawer::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    background: gray;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.drawer::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+    visibility: visible;
+}
+
+.drawer:hover::-webkit-scrollbar-thumb {
+    background: -var(--scrollbar-color);
+    visibility: visible;
+}
+
+/* end scroll bar */
+.footer span {
+    color: var(--footer-color);
+    font-size: smaller;
+}
+
+.footer a {
+    color: var(--footer-color);
+    text-decoration: none;
+    font-size: smaller;
+}
+
+.footer a:hover {
+    color: var(--footer-color);
+    text-decoration: underline;
 }
 
 /* end drawer */
+.contacts-aside {
+    padding: 5px 0 5px 5px;
+    height: calc(100vh - 70px);
+    background-color: #4E4F50;
+    overflow-y: auto;
+}
