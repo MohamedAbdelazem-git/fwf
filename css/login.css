@@ -1,0 +1,28 @@
+:root {
+    --bg-color: #18191A;
+    --accent-color: #303031;
+    --hover-color: #4e4f5079;
+    --accent-text-color: #e9edf3;
+    --drawer-icon-color: #5781d6;
+    --scrollbar-color: rgba(128, 128, 128, 0.651);
+    --hr-color: #c0b7ab75;
+    --footer-color: #c0b7ab;
+    --main-duration: 0.3s;
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: "Work Sans", sans-serif !important;
+    background-color: #f0f2f5 !important;
+}
+.container {
+    margin: 50px auto;
+}
+form{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    background-color: #fff;
+    text-align: center;
+    justify-content: center;
+    border-radius: 8px;
+}
