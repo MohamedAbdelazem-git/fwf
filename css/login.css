@@ -38,12 +38,20 @@ footer{
 }
 footer ol{
     display: flex;
-    justify-content:space-evenly;
+    text-align: center;
     align-items:center;
+    flex-wrap: wrap;
+    font-size: 12px;
 }
-footer ol>li{
+footer ol li{
     list-style: none;
-    color: #5781d6;
+    padding: 2px;
+    color:#737373;
+}
+li a{
+    color:#737373 !important;
+    padding: 2px;
+
 }
 ol>li>a{
     text-decoration: none;
