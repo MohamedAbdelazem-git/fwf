@@ -16,7 +16,7 @@ body {
     font-family: "Work Sans", sans-serif !important;
     background-color: #f0f2f5 !important;
 }
-.container {
+.main {
     margin: 150px auto;
     padding: 500px auto;
 }
@@ -32,4 +32,27 @@ form{
 img{
     width: 50%;
     height: 50%;
+}
+footer{
+    background-color: #fff;
+}
+footer ol{
+    display: flex;
+    text-align: center;
+    align-items:center;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+footer ol li{
+    list-style: none;
+    padding: 2px;
+    color:#737373;
+}
+li a{
+    color:#737373 !important;
+    padding: 2px;
+
+}
+ol>li>a{
+    text-decoration: none;
 }
