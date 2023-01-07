@@ -33,6 +33,32 @@ body {
     color: var(--accent-text-color);
 }
 
+@media (max-width: 1159px) {
+    .drawer-item span {
+        display: none !important;
+    }
+
+    .drawer-item {
+        padding: 10px !important;
+    }
+
+    .contacts-aside {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 1160px) {
+    .drawer-item span {
+        display: inline !important;
+    }
+
+    .contacts-aside {
+        display: block !important;
+    }
+
+}
+
 /* start scroll bar */
 /* width */
 .side-scrollbar::-webkit-scrollbar {
@@ -57,6 +83,7 @@ body {
     visibility: visible;
 }
 
+
 /* end scroll bar */
 
 
@@ -78,6 +105,8 @@ body {
 
 .search {
     position: relative;
+    /* max-width: 500px; */
+    margin: 0 auto;
 }
 
 .search input {
@@ -127,8 +156,8 @@ body {
 
 /* start drawer */
 .drawer {
-    height: calc(100vh - 70px);
-    width: 308px !important;
+    /* height: calc(100vh - 70px); */
+    max-width: 360px;
     overflow-y: auto;
 }
 
@@ -136,6 +165,8 @@ body {
     border-radius: 5px;
     padding: 8px 18px;
 }
+
+
 
 .drawer-item:hover {
     cursor: pointer;
@@ -159,7 +190,7 @@ body {
 .drawer-item span {
     color: var(--accent-text-color);
     letter-spacing: -1px;
-    font-weight: 500;
+    font-weight: 500px;
     padding-left: 10px;
 }
 
@@ -210,15 +241,14 @@ body {
 }
 
 .contacts-aside {
-    height: calc(100vh - 70px);
-    width: 360px !important;
+    /* height: calc(100vh - 60px); */
     overflow-y: auto;
+    max-width: 360px;
+
 }
 
 .contact-head-icon {
     margin: 0 3px;
-    width: 28px;
-    height: 28px;
     border-radius: 100%;
     padding: 7px;
     font-size: 14px;
@@ -233,7 +263,7 @@ body {
 
 .contacts-aside .d-flex span:first-child {
     font-weight: bold;
-    color: whitesmoke;
+    color: rgba(255, 255, 255, 0.747);
 }
 
 .contact-item {
@@ -260,14 +290,16 @@ body {
 /* start timeline */
 .mainwrapper {
     overflow: auto;
+    max-width: 680px !important;
+    min-width: 423px !important;
+    margin: 20px auto;
 }
 
 /* start card stories */
 .stories-card {
-    max-width: 680px;
-    max-height: 260px;
+    min-width: 423px;
+
     margin: 0 auto;
-    padding: 8px 0 24px;
 }
 
 .card {
@@ -296,8 +328,8 @@ body {
 }
 
 .card-img {
-    min-height: 130px;
-    min-width: 100px;
+    min-width: 130px;
+    max-width: 130px;
     width: 100%;
     height: 100%;
     background-color: transparent !important;
@@ -306,8 +338,8 @@ body {
 
 .card-title-position {
     display: inline-block;
-    width: 80%;
-    height: 50px;
+    /* width: 80%;
+    height: 50px; */
     position: absolute;
     bottom: 0;
     left: 5px;
@@ -315,11 +347,94 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.005);
+    /* transform: scale(1.005); */
     cursor: pointer;
-    transition: var(--main-duration);
+    /* transition: var(--main-duration); */
 }
 
 /* end card stories */
+
+/* add post */
+.add-post {
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    /* max-width: 492px; */
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.post-options {
+    padding: 10px;
+    border-radius: 5px;
+    color: #000;
+}
+
+.post-options i {
+    margin-right: 10px;
+    font-size: 20px !important;
+}
+
+.post-options .fa-video {
+    color: #F23E5C;
+}
+
+.post-options .fa-images {
+    color: #58C472;
+}
+
+.post-options .fa-face-laugh {
+    color: #F8C03E;
+}
+
+.post-options span {
+    color: var(--secondry-color);
+}
+
+.post-options:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+/* end post */
+.post-header-icon {
+    padding: 10px 12px 6px 12px;
+}
+
+.post-header-icon:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.posts h6 {
+    color: white;
+    cursor: pointer;
+    margin: 0;
+}
+
+.posts i {
+    font-size: 12px;
+}
+
+.posts h6:hover {
+    text-decoration: underline;
+}
+
+.posts .flex-column span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.post-action {
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.post-action:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
 
 /* end timeline */
